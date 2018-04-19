@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+html, body {
+width: 100%;
+height: 100%;
+margin: 0;
+}
+html {
+font-family: 'Fira Sans', sans-serif;
+}
+.nav {
+bordon-bottom: 1px solid #EAEAEB;
+text-align: right;
+height: 70px;
+line-height: 70px;
+}
+.menu {
+margin: 0 30px 0 0; /* top right bottom left */
+}
+.menu a {
+clear: right;
+text-decoration: none;
+color: gray;
+margin: 0 10px;
+line-height: 70px;
+}
+span {
+color: #54D17A;
+}
+label {
+margin: 0 40px 0 0;
+font=size: 26px;
+line-height: 70px;
+display: none;
+width: 26px;
+float: right;
+}
+#toggle{
+display: none;
+}
+  
+h1 h2 h3 h4 {
+font-family: 'Roboto', sans-serif;
+font-weight: 900;
+}
+@media only screen and  (max-width: 500px) {
+label {
+display: block;
+cursor: pointer;
+}
+.menu {
+text-align: center;
+width: 100%;
+display: none;
+}
+.menu a {
+display: block;
+border-bottom: 1px solid #EAEAEB;
+margin: 0;
+}
+#toggle:checked + .menu {
+display: block;
+}
+}
+
+/* EXAMPLE:
+
+
+<div class="nav">
+<label for="toggle">&#9776;</label> <!-- hamburger image -->
+<input type="checkbox" id="toggle"/> <!-- toggles hamburger menu as a checkbox (will be visually hidden with css) -->
+<div class="menu">
+<a href="#">Business</a>
+<a href="#">Services</a>
+<a href="#">Learn More</a>
+<a href="#"><span>Free Trial</span></a>
+</div>
+</div>
+
+
+*/
